@@ -1,5 +1,6 @@
-package br.com.vitor.teste.data.methods;
+package br.com.vitor.data.date.methods;
 
+import java.time.Instant;
 import java.util.Date;
 
 public class Main {
@@ -14,6 +15,8 @@ public class Main {
         // Wed Jul 06 22:13:43 BRT 2022
 
         // AFTER AND BEFORE
+        System.out.println("-------------- AFTER AND BEFORE --------------");
+
         if(currentDate.after(dateInPast)) {
            System.out.println(currentDate + " is after " + dateInPast);
         } else {
@@ -27,6 +30,7 @@ public class Main {
         }
 
         // COMPARETO AND EQUALS
+        System.out.println("-------------- COMPARETO AND EQUALS --------------");
         Date newDateInPast = new Date(658673159000L);
         if(dateInPast.equals(newDateInPast)) {
             System.out.println(dateInPast + " is equals to " + newDateInPast);
@@ -43,6 +47,17 @@ public class Main {
         printComparison(dateInPast.compareTo(dateInFuture));
         printComparison(dateInPast.compareTo(newDateInPast));
         printComparison(dateInFuture.compareTo(dateInPast));
+
+        // FROM AND TOINSTANT
+        System.out.println("-------------- FROM AND TOINSTANT --------------");
+
+        currentDate = Date.from(Instant.now()); // Date from an Instant's instance
+
+        System.out.println(currentDate);
+
+        Instant thisMoment = currentDate.toInstant();
+
+        System.out.println(thisMoment);
 
     }
 
