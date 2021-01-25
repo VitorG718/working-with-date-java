@@ -1,4 +1,4 @@
-package br.com.vitor.data.calendar.methods;
+package br.com.vitor.data.calendar;
 
 import java.util.Calendar;
 
