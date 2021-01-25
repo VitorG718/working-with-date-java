@@ -1,4 +1,4 @@
-package br.com.vitor.data.simpledateformat;
+package br.com.vitor.data.beforeJava8.simpleDateFormat;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
